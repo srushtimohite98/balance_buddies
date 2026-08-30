@@ -1,16 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-BXSJHGPS4N"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-BXSJHGPS4N');
-</script>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Balance Buddies ⚖️</title>
@@ -20,48 +10,63 @@
 <div class="app">
 
 <header>
- <div class="brand"><div class="logo">⚖️</div><div><h1>Balance Buddies</h1><p>Learn maths by playing!</p></div></div>
- <div class="score"><div class="bubble">⭐ <span id="stars">0</span></div><div class="bubble">🏅 <span id="level">1</span>/6</div></div>
+  <div class="brand">
+    <div class="logo">⚖️</div>
+    <div><h1>Balance Buddies</h1><p>Learn maths by playing!</p></div>
+  </div>
+  <div class="score">
+    <div class="bubble">⭐ <span id="stars">0</span></div>
+    <div class="bubble">🏅 <span id="level">1</span>/6</div>
+  </div>
 </header>
 
 <main>
-<section class="card">
- <h2 id="title">Let's make the scale happy!</h2>
- <div class="question" id="question">Both sides must weigh the same. Can you find the mystery box?</div>
- <div class="progress"><i id="progress"></i></div>
- <div class="game">
-   <div class="instruction" id="instruction">Look carefully 👀</div>
-   <div class="scale">
-    <div class="beam" id="beam"></div><div class="pivot"></div>
-    <div class="rope a"></div><div class="rope c"></div>
-    <div class="pan left" id="left"></div><div class="pan right" id="right"></div>
-   </div>
-   <div class="message" id="message"></div>
-   <div class="actions">
-    <button class="btn" onclick="hint()">💡 Show me</button>
-    <button class="btn primary" onclick="check()">Check ✓</button>
-   </div>
-   <div class="answer"><input id="ans" type="number" min="0" placeholder="?"><button onclick="check()">My Answer</button></div>
- </div>
-</section>
+  <section class="card">
+    <h2 id="title">Let's make the scale happy!</h2>
+    <div class="question" id="question">Both sides must weigh the same. Can you find the mystery box?</div>
+    <div class="progress"><i id="progress"></i></div>
+    <div class="game">
+      <div class="instruction" id="instruction">Look carefully 👀</div>
+      <div class="scale">
+        <div class="beam" id="beam"></div>
+        <div class="pivot"></div>
+        <div class="rope a"></div>
+        <div class="rope c"></div>
+        <div class="pan left" id="left"></div>
+        <div class="pan right" id="right"></div>
+      </div>
+      <div class="message" id="message"></div>
+      <div class="actions">
+        <button class="btn" onclick="hint()">💡 Show me</button>
+        <button class="btn primary" onclick="check()">Check ✓</button>
+      </div>
+      <div class="answer"><input id="ans" type="number" min="0" placeholder="?">
+        <button onclick="check()">My Answer</button>
+      </div>
+    </div>
+  </section>
 
-<aside class="card side">
- <h3>🌟 How to play</h3>
- <p>Imagine both pans are friends. They are happy when they have the <b>same weight</b>.</p>
- <div class="rule"><b>👀 Look</b> See what is on each pan.</div>
- <div class="rule"><b>🧩 Think</b> Find what is missing.</div>
- <div class="rule"><b>⚖️ Balance</b> Give the same amount to both sides.</div>
- <div class="rule lesson"><b>Remember!</b> If you take something away from one side, take it away from the other side too.</div>
- <div class="badge">🎈 🧠 ⭐</div>
- <button class="btn green" onclick="resetGame()">🔄 Start again</button>
-</aside>
+  <aside class="card side">
+    <h3>🌟 How to play</h3>
+    <p>Imagine both pans are friends. They are happy when they have the <b>same weight</b>.</p>
+    <div class="rule"><b>👀 Look</b> See what is on each pan.</div>
+    <div class="rule"><b>🧩 Think</b> Find what is missing.</div>
+    <div class="rule"><b>⚖️ Balance</b> Give the same amount to both sides.</div>
+    <div class="rule lesson"><b>Remember!</b> If you take something away from one side, take it away from the other side too.</div>
+    <div class="badge">🎈 🧠 ⭐</div>
+    <button class="btn green" onclick="resetGame()">🔄 Start again</button>
+  </aside>
 </main>
 </div>
 
-<div class="modal" id="modal"><div class="modalbox">
- <div style="font-size:55px">🏆</div><h2>You are a Balance Buddy!</h2>
- <p id="finalText"></p><button class="btn green" onclick="resetGame();closeModal()">Play again 🎮</button>
-</div></div>
+<div class="modal" id="modal">
+  <div class="modalbox">
+  <div style="font-size:55px">🏆</div>
+  <h2>You are a Balance Buddy!</h2>
+  <p id="finalText"></p>
+  <button class="btn green" onclick="resetGame();closeModal()">Play again 🎮</button>
+</div>
+</div>
 
 <script src="js/script.js"></script>
 </body>

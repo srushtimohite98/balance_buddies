@@ -1,69 +1,152 @@
-*{box-sizing:border-box}
+*{
+    box-sizing:border-box
+}
 body{
-    margin:0;font-family:"Trebuchet MS",system-ui,sans-serif;background:#fff8e8;color:#29304d
+    margin:0;
+    font-family:"Trebuchet MS",system-ui,sans-serif;
+    background:#fff8e8;
+    color:#29304d
 }
 button{
-    font:inherit;border:0;cursor:pointer
+    font:inherit;
+    border:0;
+    cursor:pointer
 }
 .app{
-    max-width:1050px;margin:auto;padding:18px
+    max-width:1050px;
+    margin:auto;
+    padding:18px
 }
 header{
-    display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;gap:10px
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:14px;
+    gap:10px
 }
 .brand{
-    display:flex;align-items:center;gap:10px
+    display:flex;
+    align-items:center;
+    gap:10px
 }
 .logo{
     font-size:42px
 }
 .brand h1{
-    margin:0;font-size:28px;color:#4d3b99
+    margin:0;
+    font-size:28px;
+    color:#4d3b99
 }
 .brand p{
-    margin:2px 0;color:#73758b;font-size:13px
+    margin:2px 0;
+    color:#73758b;
+    font-size:13px
 }
 .score{
-    display:flex;gap:8px
+    display:flex;
+    gap:8px
 }
 .bubble{
-    background:white;border:3px solid #ffe19a;border-radius:20px;padding:8px 13px;font-weight:bold
+    background:white;
+    border:3px solid #ffe19a;
+    border-radius:20px;
+    padding:8px 13px;
+    font-weight:bold
 }
 .card{
-    background:white;border-radius:28px;border:3px solid #f1dfbd;box-shadow:0 12px 0 #ead8b8;padding:20px
+    background:white;
+    border-radius:28px;
+    border:3px solid #f1dfbd;
+    box-shadow:0 12px 0 #ead8b8;
+    padding:20px
 }
 main{
-    display:grid;grid-template-columns:1fr 290px;gap:18px
+    display:grid;
+    grid-template-columns:1fr 290px;
+    gap:18px
 }
 h2{
-    font-size:22px;margin:0 0 6px
+    font-size:22px;
+    margin:0 0 6px
 }
 .question{
-    font-size:18px;color:#65677b;margin-bottom:15px
+    font-size:18px;
+    color:#65677b;
+    margin-bottom:15px
 }
 .progress{
-    height:12px;background:#eee8dc;border-radius:20px;overflow:hidden;margin-bottom:20px
+    height:12px;
+    background:#eee8dc;
+    border-radius:20px;
+    overflow:hidden;
+    margin-bottom:20px
 }
 .progress i{
-    display:block;height:100%;background:#7ed957;border-radius:20px;transition:.4s
+    display:block;
+    height:100%;
+    background:#7ed957;
+    border-radius:20px;
+    transition:.4s
 }
 .game{
-    background:#f5f1ff;border-radius:22px;padding:18px;min-height:390px;position:relative
+    background:#f5f1ff;
+    border-radius:22px;
+    padding:18px;
+    min-height:390px;
+    position:relative
 }
 .instruction{
-    text-align:center;background:#fff;border:2px solid #ded4ff;border-radius:16px;padding:10px;font-weight:bold;font-size:16px
+    text-align:center;
+    background:#fff;
+    border:2px solid #ded4ff;
+    border-radius:16px;
+    padding:10px;
+    font-weight:bold;
+    font-size:16px
 }
 .scale{
-    height:240px;position:relative;max-width:650px;margin:auto
+    height:240px;
+    position:relative;
+    max-width:650px;
+    margin:auto
 }
 .beam{
-    position:absolute;left:14%;right:14%;top:83px;height:13px;background:#6f668f;border-radius:20px;transform-origin:50% 50%;transition:.55s
+    position:absolute;
+    left:14%;
+    right:14%;
+    top:83px;
+    height:13px;
+    background:#6f668f;
+    border-radius:20px;
+    transform-origin:50% 50%;
+    transition:.55s
 }
 .pivot{
-    position:absolute;left:50%;top:87px;transform:translateX(-50%);width:0;height:0;border-left:30px solid transparent;border-right:30px solid transparent;border-top:60px solid #ffb84d
+    position:absolute;
+    left:50%;
+    top:87px;
+    transform:translateX(-50%);
+    width:0;
+    height:0;
+    border-left:30px solid transparent;
+    border-right:30px solid transparent;
+    border-top:60px solid #ffb84d
 }
 .pan{
-    position:absolute;top:98px;width:38%;min-height:105px;border:5px solid #6f668f;border-top:0;border-radius:0 0 70px 70px;display:flex;justify-content:center;align-items:flex-start;gap:7px;padding:18px 6px;background:#ffffff80;transition:.55s
+    position:absolute;
+    top:98px;
+    width:38%;
+    min-height:105px;
+    border:5px solid #6f668f;
+    border-top:0;
+    border-radius:0 0 70px 70px;
+    display:flex;
+    justify-content:center;
+    align-items:flex-start;
+    gap:7px;
+    padding:18px 6px;
+    background:#ffffff80;
+    transition:.55s
 }
 .pan.left{
     left:2%
@@ -72,7 +155,11 @@ h2{
     right:2%
 }
 .rope{
-    position:absolute;top:83px;width:4px;height:34px;background:#6f668f
+    position:absolute;
+    top:83px;
+    width:4px;
+    height:34px;
+    background:#6f668f
 }
 .rope.a{
     left:10%
@@ -84,19 +171,38 @@ h2{
     right:10%
 }
 .item{
-    width:48px;height:48px;border-radius:14px;display:grid;place-items:center;font-size:25px;background:#ffd66d;border:3px solid #efad38;box-shadow:0 4px 0 #e6bd68;animation:pop .25s
+    width:48px;
+    height:48px;
+    border-radius:14px;
+    display:grid;
+    place-items:center;
+    font-size:25px;
+    background:#ffd66d;
+    border:3px solid #efad38;
+    box-shadow:0 4px 0 #e6bd68;
+    animation:pop .25s
 }
 .x{
-    background:#a99aff;border-color:#7764df
+    background:#a99aff;
+    border-color:#7764df
 }
 .hidden{
     opacity:0
 }
 @keyframes pop{
-    from{transform:scale(.5) rotate(-8deg)}to{transform:scale(1)}
+    from{
+        transform:scale(.5) rotate(-8deg)
+    }to
+    {
+        transform:scale(1)
+    }
 }
 .message{
-    text-align:center;min-height:45px;font-size:17px;font-weight:bold;padding:8px
+    text-align:center;
+    min-height:45px;
+    font-size:17px;
+    font-weight:bold;
+    padding:8px
 }
 .good{
     color:#259c56
@@ -105,36 +211,165 @@ h2{
     color:#e56a3d
 }
 .actions{
-    display:flex;justify-content:center;gap:9px;flex-wrap:wrap
+    display:flex;
+    justify-content:center;
+    gap:9px;
+    flex-wrap:wrap
 }
 .btn{
-    padding:12px 18px;border-radius:15px;background:#eeeaf9;color:#40366c;font-weight:bold
+    padding:12px 18px;
+    border-radius:15px;
+    background:#eeeaf9;
+    color:#40366c;
+    font-weight:bold
 }
 .primary{
-    background:#7458e8;color:#fff;box-shadow:0 4px 0 #523db5
+    background:#7458e8;
+    color:#fff;
+    box-shadow:0 4px 0 #523db5
 }
 .green{
-    background:#7ed957;color:#164d22;box-shadow:0 4px 0 #5db63b
+    background:#7ed957;
+    color:#164d22;
+    box-shadow:0 4px 0 #5db63b
 }
 .btn:active{
-    transform:translateY(3px);box-shadow:none
+    transform:translateY(3px);
+    box-shadow:none
 }
 .answer{
-    margin:12px auto 0;display:flex;justify-content:center;gap:8px
+    margin:12px auto 0;
+    display:flex;
+    justify-content:center;
+    gap:8px
 }
 .answer input{
-    width:130px;padding:12px;border:3px solid #d9d1ef;border-radius:14px;text-align:center;font-size:20px;outline:none
+    width:130px;
+    padding:12px;
+    border:3px solid #d9d1ef;
+    border-radius:14px;
+    text-align:center;
+    font-size:20px;
+    outline:none
 }
 .answer button{
-    padding:12px 17px;border-radius:14px;background:#ffbd4a;font-weight:bold
+    padding:12px 17px;
+    border-radius:14px;
+    background:#ffbd4a;
+    font-weight:bold
 }
 .side h3{
     margin-top:0
 }
 .side p{
-    color:#6d7085;line-height:1.45;font-size:14px
-}.rule{padding:12px;border-radius:16px;background:#fff6da;margin:10px 0;border:2px solid #f4df9d}.rule b{display:block}.side button{width:100%;margin-top:8px}
-.lesson{background:#edf9ff;border-color:#bde7fa}.badge{font-size:28px;text-align:center;margin:8px}
-.modal{position:fixed;inset:0;background:#29304db8;display:none;place-items:center;padding:20px}.modal.show{display:grid}.modalbox{background:white;border-radius:28px;padding:28px;text-align:center;max-width:450px;border:4px solid #ffd66d;box-shadow:0 14px 0 #c8b77f}.modalbox h2{font-size:30px;color:#4d3b99}.modalbox button{margin-top:10px}
-@media(max-width:780px){main{grid-template-columns:1fr}.side{order:-1}.side .rule{display:inline-block;width:31%;vertical-align:top}.scale{height:220px}.pan{width:39%}}
-@media(max-width:540px){.app{padding:10px}.brand h1{font-size:23px}.logo{font-size:34px}.score{display:none}.card{padding:14px;border-radius:22px}.game{padding:10px}.side .rule{display:block;width:100%}.item{width:39px;height:39px;font-size:20px}.pan{min-height:88px}.scale{height:205px}.question{font-size:16px}}
+    color:#6d7085;
+    line-height:1.45;
+    font-size:14px
+}
+.rule{
+    padding:12px;
+    border-radius:16px;
+    background:#fff6da;
+    margin:10px 0;
+    border:2px solid #f4df9d
+}
+.rule b{
+    display:block
+}
+.side button{
+    width:100%;
+    margin-top:8px
+}
+.lesson{
+    background:#edf9ff;
+    border-color:#bde7fa
+}
+.badge{
+    font-size:28px;
+    text-align:center;
+    margin:8px
+}
+.modal{
+    position:fixed;
+    inset:0;
+    background:#29304db8;
+    display:none;
+    place-items:center;
+    padding:20px
+}
+.modal.show{
+    display:grid
+}
+.modalbox{
+    background:white;
+    border-radius:28px;
+    padding:28px;
+    text-align:center;
+    max-width:450px;
+    border:4px solid #ffd66d;
+    box-shadow:0 14px 0 #c8b77f
+}
+.modalbox h2{
+    font-size:30px;
+    color:#4d3b99
+}
+.modalbox button{
+    margin-top:10px
+}
+@media(max-width:780px){
+    main{
+        grid-template-columns:1fr
+    }
+    .side{
+        order:-1
+    }
+    .side .rule{
+        display:inline-block;
+        width:31%;
+        vertical-align:top
+    }
+    .scale{
+        height:220px
+    }
+    .pan{
+        width:39%
+    }
+}
+@media(max-width:540px){
+    .app{
+        padding:10px
+    }
+    .brand h1{
+        font-size:23px
+    }
+    .logo{
+        font-size:34px
+    }
+    .score{
+        display:none
+    }
+    .card{
+        padding:14px;
+        border-radius:22px
+    }
+    .game{
+        padding:10px
+    }
+    .side .rule{
+        display:block;
+        width:100%
+    }
+    .item{
+        width:39px;
+        height:39px;
+        font-size:20px
+    }
+    .pan{
+        min-height:88px
+    }.scale{
+        height:205px
+    }
+    .question{
+        font-size:16px
+    }
+}
